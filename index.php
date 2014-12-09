@@ -1,11 +1,6 @@
 <?php
-$news = array (
-    array (
-        'title'=>'Первая новость',
-        'text'=>'В лесу родилась ёлочка,'),
 
-    array(
-        'title'=>'Вторая новость',
-        'text'=>'В лесу щна росла.'),
-);
- include 'view/index.php';
+require_once __DIR__ . '/models/news.php';
+$news = News_getAll();
+
+ include '/view/index.php';
