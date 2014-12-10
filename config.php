@@ -6,6 +6,6 @@ return array
         'db'=>'localhost',
         'user'=>'root',
         'password'=>'',
-        'dbname'=>'gallery'
+        'dbname'=>'gallery',
     )
 );
