@@ -1,13 +1,22 @@
 <html>
-    <head>
-        <title>Новости</title>
-    </head>
-        <body>
-            <?php foreach ($news as $article): ?>
-            <article>
-                <h1><?=$article['title'];?></h1>
-                <div><?=$article['text'];?></div>
-            </article>
-            <?php endforeach; ?>
-        </body>
+<head>
+    <title>Новости</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <?foreach ($news as $key => $value): ?>
+        <a href="/../controllers/news_review.php?id=<?= $value['id']; ?>">Просмотр новости № <?= $key+1; ?></a><br />
+    <?php endforeach; ?>
+</div>
+<br/>
+<div>
+    <a href="/../controllers/news_review_all.php">Все новости</a>
+</div>
+<br/>
+<div>
+    <a href="/../controllers/news_add.php">Добавление новостей</a>
+</div>
+</body>
 </html>
+

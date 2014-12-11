@@ -14,6 +14,7 @@ function DBConnect()
     );
     mysql_select_db($config['db']['dbname']);
 }
+
 function DBQuery($sql)
 {
     DBConnect();
@@ -29,3 +30,24 @@ function DBQuery($sql)
     }
     return $ret;
 }
+/*
+function DbQueryOne($sql)
+{
+    return DbQuery($sql)[0];
+}
+
+*/
+
+function DBExec($sql)
+{
+    DBConnect();
+    $res = mysql_query($sql);
+    if (!$res)
+    {
+        echo mysql_error();
+        return false;
+    }
+        return true;
+}
+
+
