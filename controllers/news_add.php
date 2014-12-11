@@ -1,7 +1,7 @@
 <?php
 
 
-require_once __DIR__ . 'models/news.php';
+require_once __DIR__ . '/../models/news.php';
 
 if (isset($_POST['title']) && isset($_POST['text'])){
     $title =  $_POST['title'];
@@ -16,4 +16,4 @@ if (isset($_POST['title']) && isset($_POST['text'])){
 }
 
 
-include '/view/article_add.php';
+include __DIR__ . '/../view/article_add.php';
