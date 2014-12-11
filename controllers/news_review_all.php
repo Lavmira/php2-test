@@ -3,7 +3,7 @@ require_once __DIR__ . '/../models/news.php';
 
 $news = News_getAll();
 
-include '/view/article_review_all.php';
+include__DIR__ .  '/../view/article_review_all.php';
 
 
 
