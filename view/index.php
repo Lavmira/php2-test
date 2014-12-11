@@ -5,8 +5,8 @@
 </head>
 <body>
 <div>
-    <?foreach ($news as $key => $value): ?>
-        <a href="/../controllers/news_review.php?id=<?= $value['id']; ?>">Просмотр новости № <?= $key+1; ?></a><br />
+    <?foreach ($news as $key => $article): ?>
+        <a href="/../controllers/news_review.php?id=<?= $article['id']; ?>">Просмотр новости № <?= $key+1; ?></a><br />
     <?php endforeach; ?>
 </div>
 <br/>
